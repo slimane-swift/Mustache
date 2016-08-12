@@ -210,14 +210,14 @@ final public class Context {
     // =========================================================================
     // MARK: - Not public
 
-    private enum ContextType {
+    internal enum ContextType {
         case Root
         case Box(box: MustacheBox, parent: Context)
         case PartialOverride(partialOverride: TemplateASTNode.PartialOverride, parent: Context)
     }
 
     private var registeredKeysContext: Context?
-    private let type: ContextType
+    internal let type: ContextType
 
     var willRenderStack: [WillRenderFunction] {
         switch type {

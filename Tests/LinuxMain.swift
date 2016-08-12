@@ -1,7 +1,7 @@
 #if os(Linux)
 
 import XCTest
-@testable import MustacheTestSuite
+@testable import MustacheTests
 
 XCTMain([
     testCase(MustacheTests.allTests)
